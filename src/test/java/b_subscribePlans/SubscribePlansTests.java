@@ -17,7 +17,7 @@ public class SubscribePlansTests extends BaseTests {
         return excelReader.getExcelData(0);
     }
 
-    @Test (priority = 0, dataProvider = "sa")
+    @Test (dataProvider = "sa")
     public void getPackageDataForSA(String firstTitle, String firstPriceCurrency,
                                          String secondTitle, String secondPriceCurrency,
                                          String thirdTitle, String thirdPriceCurrency) {

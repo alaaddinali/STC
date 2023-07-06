@@ -10,7 +10,7 @@ import java.time.Duration;
 
 public class Helper {
 
-    private WebDriver driver;
+    private final WebDriver driver;
     public Helper(WebDriver driver) {
         this.driver = driver;
     }
@@ -19,10 +19,5 @@ public class Helper {
     public WebElement waitUntilElementIsVisible(int seconds, By locator){
         WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
         return wait.until(ExpectedConditions.visibilityOfElementLocated(locator));
-    }
-    //wait method until the locator is clickable
-    public WebElement waitUntilElementIsClickable(int seconds, By locator){
-        WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(seconds));
-        return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 }

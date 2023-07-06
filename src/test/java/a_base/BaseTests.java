@@ -7,8 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterMethod;
-import org.testng.annotations.BeforeClass;
+import org.testng.annotations.*;
 import pages.SelectCountriesPage;
 import pages.SubscribePlanPage;
 
@@ -44,8 +43,8 @@ public class BaseTests {
         }
     }
 
-/*    @AfterClass
+   @AfterClass
     public void tearDown () {
         driver.quit();
-    }*/
+    }
 }

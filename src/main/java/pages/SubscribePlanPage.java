@@ -7,57 +7,57 @@ import utilities.Helper;
 
 public class SubscribePlanPage {
 
-    private WebDriver driver;
+    private final WebDriver driver;
     protected Helper helper;
     public SubscribePlanPage(WebDriver driver) {
         this.driver = driver;
     }
 
-    private By firstPackageTypeTitle = By.id("name-lite");
-    private By secondPackageTypeTitle = By.id("name-classic");
-    private By thirdPackageTypeTitle = By.id("name-premium");
-    private By firstPackageTypePriceCurrency = By.id("currency-lite");
-    private By secondPackageTypePriceCurrency = By.id("currency-classic");
-    private By thirdPackageTypePriceCurrency = By.id("currency-premium");
+    private final By firstPackageTypeTitle = By.id("name-lite");
+    private final By secondPackageTypeTitle = By.id("name-classic");
+    private final By thirdPackageTypeTitle = By.id("name-premium");
+    private final By firstPackageTypePriceCurrency = By.id("currency-lite");
+    private final By secondPackageTypePriceCurrency = By.id("currency-classic");
+    private final By thirdPackageTypePriceCurrency = By.id("currency-premium");
 
     public String getFirstPackageName(){
         helper = new Helper(driver);
-        WebElement element = helper.waitUntilElementIsVisible(10, firstPackageTypeTitle);
+        helper.waitUntilElementIsVisible(10, firstPackageTypeTitle);
         WebElement litePackageTitle = driver.findElement(firstPackageTypeTitle);
         return litePackageTitle.getText();
     }
 
     public String getSecondPackageName(){
         helper = new Helper(driver);
-        WebElement element = helper.waitUntilElementIsVisible(10, secondPackageTypeTitle);
+        helper.waitUntilElementIsVisible(10, secondPackageTypeTitle);
         WebElement litePackageTitle = driver.findElement(secondPackageTypeTitle);
         return litePackageTitle.getText();
     }
 
     public String getThirdPackageName(){
         helper = new Helper(driver);
-        WebElement element = helper.waitUntilElementIsVisible(10, thirdPackageTypeTitle);
+        helper.waitUntilElementIsVisible(10, thirdPackageTypeTitle);
         WebElement litePackageTitle = driver.findElement(thirdPackageTypeTitle);
         return litePackageTitle.getText();
     }
 
     public String getFirstPackagePriceCurrency(){
         helper = new Helper(driver);
-        WebElement element = helper.waitUntilElementIsVisible(10, firstPackageTypePriceCurrency);
+        helper.waitUntilElementIsVisible(10, firstPackageTypePriceCurrency);
         WebElement litePackageTitle = driver.findElement(firstPackageTypePriceCurrency);
         return litePackageTitle.getText();
     }
 
     public String getSecondPackagePriceCurrency(){
         helper = new Helper(driver);
-        WebElement element = helper.waitUntilElementIsVisible(10, secondPackageTypePriceCurrency);
+        helper.waitUntilElementIsVisible(10, secondPackageTypePriceCurrency);
         WebElement litePackageTitle = driver.findElement(secondPackageTypePriceCurrency);
         return litePackageTitle.getText();
     }
 
     public String getThirdPackagePriceCurrency(){
         helper = new Helper(driver);
-        WebElement element = helper.waitUntilElementIsVisible(10, thirdPackageTypePriceCurrency);
+        helper.waitUntilElementIsVisible(10, thirdPackageTypePriceCurrency);
         WebElement litePackageTitle = driver.findElement(thirdPackageTypePriceCurrency);
         return litePackageTitle.getText();
     }
